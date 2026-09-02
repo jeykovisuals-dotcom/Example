@@ -52,7 +52,7 @@
             <a href="#"          class="site-nav__link active">Home</a>
             <a href="#learn"     class="site-nav__link">About Me</a>
             <a href="#features"  class="site-nav__link">Features</a>
-            <a href="#contact"   class="site-nav__link">Contact Us</a>
+            <a href="#contact"   class="site-nav__link">Contact Me</a>
           </nav>
 
         </div>
@@ -185,8 +185,8 @@
 
         <!-- Column 1: Contact Form -->
         <div class="footer-contact-col" aria-labelledby="contact-heading">
-          <h3 class="site-footer__col-title" id="contact-heading">Contact Us</h3>
-          <p class="site-footer__col-subtitle">Send us a message</p>
+          <h3 class="site-footer__col-title" id="contact-heading">Contact Me</h3>
+          <p class="site-footer__col-subtitle">Send me a message</p>
 
           <form class="footer-contact__form" novalidate id="footer-form">
             <input
@@ -223,7 +223,7 @@
             <li><a href="#home"     class="footer-sitemap__link">- Home</a></li>
             <li><a href="#learn"    class="footer-sitemap__link">- About Me</a></li>
             <li><a href="#features" class="footer-sitemap__link">- Feature</a></li>
-            <li><a href="#contact"  class="footer-sitemap__link">- Contact Us</a></li>
+            <li><a href="#contact"  class="footer-sitemap__link">- Contact Me</a></li>
           </ul>
         </nav>
 
@@ -234,11 +234,11 @@
           <div class="footer-info__contact">
             <div class="footer-info__item">
               <span class="footer-info__icon" aria-hidden="true">📞</span>
-              <span>(08) 400 2000</span>
+              <span>+593 939 665 581</span>
             </div>
             <div class="footer-info__item">
               <span class="footer-info__icon" aria-hidden="true">✉️</span>
-              <span>email@address.com</span>
+              <span>jeykovisuals@gmail.com</span>
             </div>
           </div>
         </div>
@@ -293,11 +293,28 @@
       });
     });
 
-    /* ── Footer form ─────────────────────────────── */
+    /* ── Footer form → mailto ────────────────────── */
     document.getElementById('footer-form')?.addEventListener('submit', function(e) {
       e.preventDefault();
+
+      const name    = this.querySelector('[name="name"]').value.trim();
+      const email   = this.querySelector('[name="email"]').value.trim();
+      const message = this.querySelector('[name="message"]').value.trim();
+
+      if (!name || !email || !message) {
+        alert('Por favor completa todos los campos.');
+        return;
+      }
+
+      const subject = encodeURIComponent(`Mensaje de ${name} — Portfolio`);
+      const body    = encodeURIComponent(
+        `Nombre: ${name}\nEmail: ${email}\n\nMensaje:\n${message}`
+      );
+
+      window.location.href = `mailto:jeykovisuals@gmail.com?subject=${subject}&body=${body}`;
+
       const btn = document.getElementById('footerSubmit');
-      btn.textContent = 'Sent ✓';
+      btn.textContent = '¡Enviado! ✓';
       btn.style.background = '#22c55e';
       setTimeout(() => {
         btn.textContent = 'Submit';
@@ -308,3 +325,4 @@
   </script>
 </body>
 </html>
+
