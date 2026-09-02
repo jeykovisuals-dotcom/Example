@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Design For Developers — Learn Design & Web UI with Jeyko Visuals" />
+  <title>Design For Developers | Jeyko Visuals</title>
+
+  <!-- Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Global Styles -->
+  <link rel="stylesheet" href="styles/tokens.css" />
+  <link rel="stylesheet" href="styles/reset.css" />
+  <link rel="stylesheet" href="styles/main.css" />
+
+  <!-- Component Styles -->
+  <link rel="stylesheet" href="components/Navbar/Navbar.css" />
+  <link rel="stylesheet" href="components/HeroSection/HeroSection.css" />
+  <link rel="stylesheet" href="components/LearnSection/LearnSection.css" />
+  <link rel="stylesheet" href="components/HowIWorkSection/HowIWorkSection.css" />
+  <link rel="stylesheet" href="components/Footer/Footer.css" />
+
+  <style>
+    /* ── Header + Hero share the dark bg ── */
+    .header-hero-wrap {
+      background-color: var(--dark-bg);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Cpath d='M0,50 H50 V0' stroke='rgba(74,108,247,0.15)' stroke-width='1' fill='none'/%3E%3Cpath d='M100,0 V50 H150' stroke='rgba(74,108,247,0.15)' stroke-width='1' fill='none'/%3E%3Cpath d='M0,100 H50 V150' stroke='rgba(74,108,247,0.15)' stroke-width='1' fill='none'/%3E%3Cpath d='M150,100 H100 V150' stroke='rgba(74,108,247,0.15)' stroke-width='1' fill='none'/%3E%3Cpath d='M75,30 V75 H130' stroke='rgba(74,108,247,0.08)' stroke-width='1' fill='none'/%3E%3Cpath d='M20,75 H75' stroke='rgba(74,108,247,0.08)' stroke-width='1' fill='none'/%3E%3Ccircle cx='50' cy='50' r='2.5' fill='rgba(74,108,247,0.3)'/%3E%3Ccircle cx='100' cy='50' r='2.5' fill='rgba(74,108,247,0.3)'/%3E%3Ccircle cx='50' cy='100' r='2.5' fill='rgba(74,108,247,0.3)'/%3E%3Ccircle cx='100' cy='100' r='2.5' fill='rgba(74,108,247,0.3)'/%3E%3Ccircle cx='75' cy='75' r='2' fill='rgba(74,108,247,0.2)'/%3E%3Ccircle cx='0' cy='50' r='2' fill='rgba(74,108,247,0.2)'/%3E%3Ccircle cx='150' cy='50' r='2' fill='rgba(74,108,247,0.2)'/%3E%3Ccircle cx='50' cy='0' r='2' fill='rgba(74,108,247,0.2)'/%3E%3Ccircle cx='100' cy='0' r='2' fill='rgba(74,108,247,0.2)'/%3E%3C/svg%3E");
+      background-size: 150px 150px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════
+       HEADER + HERO — Shared dark circuit board bg
+  ══════════════════════════════════════════════════ -->
+  <div class="header-hero-wrap">
+
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="container">
+        <div class="site-header__inner">
+
+          <!-- E Logo -->
+          <a href="#" class="e-logo" aria-label="Jeyko Visuals Home">E</a>
+
+          <!-- Navigation -->
+          <nav class="site-nav" aria-label="Main navigation">
+            <a href="#"          class="site-nav__link active">Home</a>
+            <a href="#learn"     class="site-nav__link">About Me</a>
+            <a href="#features"  class="site-nav__link">Features</a>
+            <a href="#purchase"  class="site-nav__link">Purchase</a>
+            <a href="#contact"   class="site-nav__link">Contact Us</a>
+          </nav>
+
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO CAROUSEL -->
+    <section class="hero-section" id="home" aria-label="Hero carousel">
+      <div class="container">
+
+        <!-- Slide + Arrows -->
+        <div class="hero-section__carousel" role="region" aria-label="Slide 2 of 3">
+          <button class="hero-section__arrow" id="prevBtn" aria-label="Previous slide">&#8249;</button>
+
+          <div class="hero-section__content">
+            <h1 class="hero-section__title" id="slideTitle">Design For Developers</h1>
+            <p class="hero-section__subtitle" id="slideSubtitle">Learn how to enhance your website</p>
+          </div>
+
+          <button class="hero-section__arrow" id="nextBtn" aria-label="Next slide">&#8250;</button>
+        </div>
+
+        <!-- Dots -->
+        <div class="hero-section__dots" role="tablist" aria-label="Slide navigation">
+          <button class="hero-section__dot"        data-slide="0" role="tab" aria-label="Slide 1" aria-selected="false"></button>
+          <button class="hero-section__dot active" data-slide="1" role="tab" aria-label="Slide 2" aria-selected="true"></button>
+          <button class="hero-section__dot"        data-slide="2" role="tab" aria-label="Slide 3" aria-selected="false"></button>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+  <!-- end header-hero-wrap -->
+
+
+  <!-- ══════════════════════════════════════════════
+       LEARN SECTION — White bg, 2-col layout
+  ══════════════════════════════════════════════════ -->
+  <section class="learn-section" id="learn" aria-labelledby="learn-title">
+    <div class="container">
+      <div class="learn-section__grid">
+
+        <!-- Left: Image -->
+        <div class="learn-section__image-col">
+          <div class="learn-section__image-box">
+            <img
+              src="assets/images/design-workspace.jpg"
+              alt="Design workspace — designers working at a table"
+              class="learn-section__photo"
+            />
+          </div>
+        </div>
+
+        <!-- Right: Content -->
+        <div class="learn-section__content">
+          <h2 class="learn-section__title" id="learn-title">Design That Speaks,<br>Code That Delivers</h2>
+          <p class="learn-section__tagline">Where visual craft meets technical precision</p>
+
+          <p class="learn-section__body">
+            Hello, I'm Jeyko from Ecuador (Jeyko Visuals), and I work across digital design, visual media, and web interfaces.
+          </p>
+          <p class="learn-section__body">
+            I noticed many digital projects struggle to connect aesthetics with functionality. Great visuals often fail in production, while solid code is often left with unpolished, rigid interfaces.
+          </p>
+          <p class="learn-section__body">
+            Design is not a mystery—it is a system of clear rules, scalable components, and structured hierarchy, just like writing clean and modular code.
+          </p>
+
+          <div class="learn-section__cta">
+            <a href="#features" class="btn btn--primary">Read More</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       HOW I WORK — Blue bg, 3 cards
+  ══════════════════════════════════════════════════ -->
+  <section class="how-section" id="features" aria-labelledby="how-title">
+    <div class="container">
+
+      <!-- Header -->
+      <div class="how-section__header">
+        <h2 class="how-section__title" id="how-title">How I Work</h2>
+        <p class="how-section__subtitle">A clear, structured workflow from concept to final delivery.</p>
+      </div>
+
+      <!-- 3 Cards -->
+      <div class="how-section__grid">
+
+        <!-- Card 01 -->
+        <article class="how-section__card">
+          <h3 class="how-section__card-title">01 / Concept &amp; Direction</h3>
+          <p class="how-section__card-body">
+            I define your project goals, visual references, target audience, and core deliverables to establish a clear plan before production begins.
+          </p>
+        </article>
+
+        <!-- Card 02 -->
+        <article class="how-section__card">
+          <h3 class="how-section__card-title">02 / Execution &amp; Motion</h3>
+          <p class="how-section__card-body">
+            I craft the visual assets, dynamic animations, or responsive web layouts using clean, modular techniques built for high retention and performance.
+          </p>
+        </article>
+
+        <!-- Card 03 -->
+        <article class="how-section__card">
+          <h3 class="how-section__card-title">03 / Polish &amp; Delivery</h3>
+          <p class="how-section__card-body">
+            I refine the details based on your feedback, concluding with a clean transfer of production-ready, organized source files.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       FOOTER — Dark circuit board, 3 columns
+  ══════════════════════════════════════════════════ -->
+  <footer class="site-footer dark-section" id="contact" aria-label="Site footer">
+    <div class="container">
+      <div class="site-footer__grid">
+
+        <!-- Column 1: Contact Form -->
+        <div class="footer-contact-col" aria-labelledby="contact-heading">
+          <h3 class="site-footer__col-title" id="contact-heading">Contact Us</h3>
+          <p class="site-footer__col-subtitle">Send us a message</p>
+
+          <form class="footer-contact__form" novalidate id="footer-form">
+            <input
+              type="text"
+              class="footer-contact__input"
+              placeholder="Full Name"
+              aria-label="Full Name"
+              name="name"
+            />
+            <input
+              type="email"
+              class="footer-contact__input"
+              placeholder="Your Email"
+              aria-label="Email address"
+              name="email"
+            />
+            <textarea
+              class="footer-contact__textarea"
+              placeholder="Your Message"
+              aria-label="Message"
+              name="message"
+            ></textarea>
+            <div>
+              <button type="submit" class="btn btn--submit" id="footerSubmit">Submit</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Column 2: Sitemap -->
+        <nav aria-labelledby="sitemap-heading">
+          <h3 class="site-footer__col-title" id="sitemap-heading">Sitemap</h3>
+          <p class="site-footer__col-subtitle">All our pages</p>
+          <ul class="footer-sitemap__list" role="list">
+            <li><a href="#home"     class="footer-sitemap__link">- Home</a></li>
+            <li><a href="#learn"    class="footer-sitemap__link">- About Me</a></li>
+            <li><a href="#features" class="footer-sitemap__link">- Feature</a></li>
+            <li><a href="#purchase" class="footer-sitemap__link">- Pricing</a></li>
+            <li><a href="#contact"  class="footer-sitemap__link">- Contact Us</a></li>
+          </ul>
+        </nav>
+
+        <!-- Column 3: Logo + Contact Info -->
+        <div class="footer-info">
+          <a href="#" class="e-logo" aria-label="Jeyko Visuals">E</a>
+
+          <div class="footer-info__contact">
+            <div class="footer-info__item">
+              <span class="footer-info__icon" aria-hidden="true">📞</span>
+              <span>(08) 400 2000</span>
+            </div>
+            <div class="footer-info__item">
+              <span class="footer-info__icon" aria-hidden="true">✉️</span>
+              <span>email@address.com</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JS -->
+  <script src="js/main.js"></script>
+
+  <script>
+    /* ── Carousel Logic ──────────────────────────── */
+    const slides = [
+      { title: 'Design For Developers',    subtitle: 'Learn how to enhance your website' },
+      { title: 'Craft Beautiful Interfaces', subtitle: 'Bridge the gap between code and design' },
+      { title: 'Build Scalable Systems',   subtitle: 'Clean, modular, production-ready code' },
+    ];
+
+    let currentSlide = 1;
+
+    const titleEl    = document.getElementById('slideTitle');
+    const subtitleEl = document.getElementById('slideSubtitle');
+    const dots       = document.querySelectorAll('.hero-section__dot');
+
+    function goToSlide(n) {
+      currentSlide = (n + slides.length) % slides.length;
+      titleEl.textContent    = slides[currentSlide].title;
+      subtitleEl.textContent = slides[currentSlide].subtitle;
+      dots.forEach((d, i) => {
+        d.classList.toggle('active', i === currentSlide);
+        d.setAttribute('aria-selected', i === currentSlide ? 'true' : 'false');
+      });
+    }
+
+    document.getElementById('prevBtn').addEventListener('click', () => goToSlide(currentSlide - 1));
+    document.getElementById('nextBtn').addEventListener('click', () => goToSlide(currentSlide + 1));
+    dots.forEach((dot, i) => dot.addEventListener('click', () => goToSlide(i)));
+
+    /* Auto-advance every 4 seconds */
+    let autoPlay = setInterval(() => goToSlide(currentSlide + 1), 4000);
+    document.querySelector('.hero-section__carousel').addEventListener('mouseenter', () => clearInterval(autoPlay));
+    document.querySelector('.hero-section__carousel').addEventListener('mouseleave', () => {
+      autoPlay = setInterval(() => goToSlide(currentSlide + 1), 4000);
+    });
+
+    /* ── Nav active on click ─────────────────────── */
+    document.querySelectorAll('.site-nav__link').forEach(link => {
+      link.addEventListener('click', function () {
+        document.querySelectorAll('.site-nav__link').forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+
+    /* ── Footer form ─────────────────────────────── */
+    document.getElementById('footer-form')?.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const btn = document.getElementById('footerSubmit');
+      btn.textContent = 'Sent ✓';
+      btn.style.background = '#22c55e';
+      setTimeout(() => {
+        btn.textContent = 'Submit';
+        btn.style.background = '';
+        this.reset();
+      }, 3000);
+    });
+  </script>
+</body>
+</html>

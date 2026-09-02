@@ -1,0 +1,150 @@
+/* ============================================================
+   FOOTER — Dark circuit board, 3-column layout
+   Contact form | Sitemap | Logo + Info
+   ============================================================ */
+
+.site-footer {
+  padding-block: 3rem 2rem;
+}
+
+/* ── 3-Column Grid ───────────────────────────────── */
+.site-footer__grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 3rem;
+}
+
+/* ── Shared Column Heading ───────────────────────── */
+.site-footer__col-title {
+  font-size: 1.05rem;
+  font-weight: var(--fw-semibold);
+  color: var(--white);
+  margin-bottom: 0.35rem;
+}
+
+.site-footer__col-subtitle {
+  font-size: 0.82rem;
+  color: var(--text-on-dark-muted);
+  margin-bottom: 1.2rem;
+}
+
+/* ══════════════════════════════════════════════════
+   CONTACT FORM COLUMN
+══════════════════════════════════════════════════ */
+.footer-contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-contact__input,
+.footer-contact__textarea {
+  width: 100%;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius-sm);
+  padding: 0.55rem 0.85rem;
+  font-family: var(--font);
+  font-size: 0.82rem;
+  color: var(--white);
+  outline: none;
+  transition: var(--transition-fast);
+}
+
+.footer-contact__input::placeholder,
+.footer-contact__textarea::placeholder {
+  color: rgba(255,255,255,0.35);
+  font-size: 0.78rem;
+}
+
+.footer-contact__input:focus,
+.footer-contact__textarea:focus {
+  border-color: rgba(74,108,247,0.5);
+  background: rgba(74,108,247,0.08);
+}
+
+.footer-contact__textarea {
+  min-height: 80px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+/* ══════════════════════════════════════════════════
+   SITEMAP COLUMN
+══════════════════════════════════════════════════ */
+.footer-sitemap__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.footer-sitemap__link {
+  font-size: 0.83rem;
+  color: var(--text-on-dark-muted);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+  display: inline-block;
+}
+
+.footer-sitemap__link:hover {
+  color: var(--white);
+}
+
+/* ══════════════════════════════════════════════════
+   LOGO + INFO COLUMN
+══════════════════════════════════════════════════ */
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.footer-info__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.footer-info__item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+  color: var(--text-on-dark-muted);
+}
+
+.footer-info__icon {
+  width: 28px;
+  height: 28px;
+  background: rgba(74,108,247,0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 0.75rem;
+}
+
+/* ── Responsive ──────────────────────────────────── */
+@media (max-width: 900px) {
+  .site-footer__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .footer-contact-col {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 560px) {
+  .site-footer__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-contact-col {
+    grid-column: auto;
+  }
+}

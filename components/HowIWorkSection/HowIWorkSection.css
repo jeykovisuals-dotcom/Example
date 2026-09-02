@@ -1,0 +1,103 @@
+/* ============================================================
+   HOW I WORK SECTION — Blue background, 3 white cards
+   ============================================================ */
+
+.how-section {
+  background: var(--accent);
+  padding-block: var(--section-py);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle radial highlight */
+.how-section::before {
+  content: '';
+  position: absolute;
+  top: -40%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  height: 80%;
+  background: radial-gradient(ellipse, rgba(255,255,255,0.08) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+/* ── Section Header ─────────────────────────────── */
+.how-section__header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.how-section__title {
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  font-weight: var(--fw-bold);
+  color: var(--white);
+  margin-bottom: 0.6rem;
+}
+
+.how-section__subtitle {
+  font-size: 0.9rem;
+  color: var(--text-on-blue-muted);
+  font-style: italic;
+  font-weight: var(--fw-light);
+}
+
+/* ── 3-Column Card Grid ─────────────────────────── */
+.how-section__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Card ────────────────────────────────────────── */
+.how-section__card {
+  background: var(--white);
+  border-radius: var(--radius-sm);
+  padding: 1.5rem 1.25rem;
+  box-shadow: var(--shadow-card);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.how-section__card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.how-section__card-title {
+  font-size: 0.88rem;
+  font-weight: var(--fw-semibold);
+  color: var(--text-dark);
+  line-height: 1.3;
+}
+
+.how-section__card-body {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* ── Responsive ──────────────────────────────────── */
+@media (max-width: 900px) {
+  .how-section__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .how-section__card {
+    padding: 1.25rem 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .how-section__grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}

@@ -1,0 +1,73 @@
+/* ============================================================
+   NAVBAR / HEADER — Dark bg + circuit board pattern
+   ============================================================ */
+
+.site-header {
+  padding: 1.1rem 0 0;
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* ── Site Navigation ──────────────────────────────── */
+.site-nav {
+  background: rgba(255, 255, 255, 0.97);
+  border-radius: var(--radius-sm);
+  padding: 5px 7px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+
+.site-nav__link {
+  display: inline-block;
+  padding: 6px 13px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: var(--fw-medium);
+  color: #333;
+  text-decoration: none;
+  transition: var(--transition-fast);
+  white-space: nowrap;
+}
+
+.site-nav__link:hover {
+  background: rgba(74, 108, 247, 0.08);
+  color: var(--accent);
+}
+
+.site-nav__link.active {
+  background: var(--accent);
+  color: white;
+}
+
+/* ── Responsive ───────────────────────────────────── */
+@media (max-width: 680px) {
+  .site-nav__link {
+    padding: 5px 8px;
+    font-size: 0.73rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-header__inner {
+    flex-direction: row;
+    gap: 0.75rem;
+  }
+
+  .site-nav {
+    flex-wrap: wrap;
+    gap: 2px;
+  }
+
+  .site-nav__link {
+    font-size: 0.7rem;
+    padding: 4px 7px;
+  }
+}

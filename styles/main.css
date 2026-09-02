@@ -1,0 +1,99 @@
+/* ============================================================
+   GLOBAL STYLES
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import './tokens.css';
+@import './reset.css';
+
+body {
+  font-family: var(--font);
+  font-size: 1rem;
+  color: var(--text-dark);
+  background: var(--white);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Container ──────────────────────────────────── */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding-inline: var(--container-px);
+}
+
+/* ── Circuit Board Dark Background ──────────────── */
+.dark-section {
+  background-color: var(--dark-bg);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Cpath d='M0,50 H50 V0' stroke='rgba(74,108,247,0.15)' stroke-width='1' fill='none'/%3E%3Cpath d='M100,0 V50 H150' stroke='rgba(74,108,247,0.15)' stroke-width='1' fill='none'/%3E%3Cpath d='M0,100 H50 V150' stroke='rgba(74,108,247,0.15)' stroke-width='1' fill='none'/%3E%3Cpath d='M150,100 H100 V150' stroke='rgba(74,108,247,0.15)' stroke-width='1' fill='none'/%3E%3Cpath d='M75,30 V75 H130' stroke='rgba(74,108,247,0.08)' stroke-width='1' fill='none'/%3E%3Cpath d='M20,75 H75' stroke='rgba(74,108,247,0.08)' stroke-width='1' fill='none'/%3E%3Ccircle cx='50' cy='50' r='2.5' fill='rgba(74,108,247,0.3)'/%3E%3Ccircle cx='100' cy='50' r='2.5' fill='rgba(74,108,247,0.3)'/%3E%3Ccircle cx='50' cy='100' r='2.5' fill='rgba(74,108,247,0.3)'/%3E%3Ccircle cx='100' cy='100' r='2.5' fill='rgba(74,108,247,0.3)'/%3E%3Ccircle cx='75' cy='75' r='2' fill='rgba(74,108,247,0.2)'/%3E%3Ccircle cx='0' cy='50' r='2' fill='rgba(74,108,247,0.2)'/%3E%3Ccircle cx='150' cy='50' r='2' fill='rgba(74,108,247,0.2)'/%3E%3Ccircle cx='50' cy='0' r='2' fill='rgba(74,108,247,0.2)'/%3E%3Ccircle cx='100' cy='0' r='2' fill='rgba(74,108,247,0.2)'/%3E%3C/svg%3E");
+  background-size: 150px 150px;
+}
+
+/* ── E Logo Component ───────────────────────────── */
+.e-logo {
+  width: 52px;
+  height: 52px;
+  background: #1a1e35;
+  border: 1.5px solid rgba(0, 212, 255, 0.5);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: var(--fw-bold);
+  color: var(--white);
+  font-family: var(--font);
+  box-shadow: var(--shadow-blue-glow);
+  flex-shrink: 0;
+  letter-spacing: -1px;
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.e-logo:hover {
+  border-color: rgba(0, 212, 255, 0.8);
+  box-shadow: 0 0 20px rgba(74,108,247,0.5), 0 0 8px rgba(0,212,255,0.3);
+}
+
+/* ── Buttons ────────────────────────────────────── */
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.75rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font);
+  font-size: 0.9rem;
+  font-weight: var(--fw-semibold);
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.btn--primary {
+  background: var(--accent);
+  color: white;
+}
+
+.btn--primary:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(74,108,247,0.4);
+}
+
+.btn--submit {
+  background: #555;
+  color: white;
+  padding: 0.55rem 1.5rem;
+  font-size: 0.85rem;
+}
+
+.btn--submit:hover {
+  background: #444;
+}
+
+/* ── Scrollbar ──────────────────────────────────── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--dark-bg); }
+::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 10px; }
